@@ -1,0 +1,142 @@
+[
+  {
+    "id": "inv-001",
+    "hotelId": "hotel-001",
+    "roomType": "Single",
+    "quantity": 5,
+    "price": 99.99
+  },
+  {
+    "id": "inv-002",
+    "hotelId": "hotel-001",
+    "roomType": "Double",
+    "quantity": 3,
+    "price": 149.99
+  },
+  {
+    "id": "inv-003",
+    "hotelId": "hotel-001",
+    "roomType": "King",
+    "quantity": 2,
+    "price": 199.99
+  },
+  {
+    "id": "inv-004",
+    "hotelId": "hotel-002",
+    "roomType": "Single",
+    "quantity": 4,
+    "price": 89.99
+  },
+  {
+    "id": "inv-005",
+    "hotelId": "hotel-002",
+    "roomType": "Queen",
+    "quantity": 3,
+    "price": 169.99
+  },
+  {
+    "id": "inv-006",
+    "hotelId": "hotel-002",
+    "roomType": "King",
+    "quantity": 2,
+    "price": 219.99
+  },
+  {
+    "id": "inv-007",
+    "hotelId": "hotel-003",
+    "roomType": "Single",
+    "quantity": 6,
+    "price": 79.99
+  },
+  {
+    "id": "inv-008",
+    "hotelId": "hotel-003",
+    "roomType": "Double",
+    "quantity": 4,
+    "price": 129.99
+  },
+  {
+    "id": "inv-009",
+    "hotelId": "hotel-003",
+    "roomType": "Queen",
+    "quantity": 2,
+    "price": 179.99
+  },
+  {
+    "id": "inv-010",
+    "hotelId": "hotel-003",
+    "roomType": "King",
+    "quantity": 1,
+    "price": 229.99
+  },
+  {
+    "id": "inv-011",
+    "hotelId": "hotel-004",
+    "roomType": "Single",
+    "quantity": 3,
+    "price": 109.99
+  },
+  {
+    "id": "inv-012",
+    "hotelId": "hotel-004",
+    "roomType": "Double",
+    "quantity": 4,
+    "price": 159.99
+  },
+  {
+    "id": "inv-013",
+    "hotelId": "hotel-004",
+    "roomType": "Queen",
+    "quantity": 2,
+    "price": 189.99
+  },
+  {
+    "id": "inv-014",
+    "hotelId": "hotel-004",
+    "roomType": "King",
+    "quantity": 2,
+    "price": 239.99
+  },
+  {
+    "id": "inv-015",
+    "hotelId": "hotel-005",
+    "roomType": "Single",
+    "quantity": 4,
+    "price": 119.99
+  },
+  {
+    "id": "inv-016",
+    "hotelId": "hotel-005",
+    "roomType": "Double",
+    "quantity": 3,
+    "price": 169.99
+  },
+  {
+    "id": "inv-017",
+    "hotelId": "hotel-005",
+    "roomType": "Queen",
+    "quantity": 2,
+    "price": 199.99
+  },
+  {
+    "id": "inv-018",
+    "hotelId": "hotel-005",
+    "roomType": "King",
+    "quantity": 1,
+    "price": 249.99
+  },
+  {
+    "id": "inv-019",
+    "hotelId": "hotel-001",
+    "roomType": "Queen",
+    "quantity": 2,
+    "price": 179.99
+  },
+  {
+    "id": "inv-020",
+    "hotelId": "hotel-002",
+    "roomType": "Double",
+    "quantity": 3,
+    "price": 139.99
+  }
+]

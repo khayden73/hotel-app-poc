@@ -1,0 +1,25 @@
+.hotelDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: start;
+    justify-content: start;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 1.5em;
+}
+
+.dates {
+    display: flex;
+    gap: 1em;
+}
+
+.date-error {
+    color: red;
+}
+
+.select-days-or-date {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

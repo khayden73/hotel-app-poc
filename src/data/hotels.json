@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hotel-001",
+    "name": "Grand Plaza Hotel",
+    "location": "New York City, NY",
+    "description": "Luxurious 5-star hotel in the heart of Manhattan with stunning city views",
+    "price": 450
+  },
+  {
+    "id": "hotel-002",
+    "name": "Seaside Resort & Spa",
+    "location": "Miami Beach, FL",
+    "description": "Beachfront resort featuring world-class spa facilities and private beach access",
+    "price": 380
+  },
+  {
+    "id": "hotel-003",
+    "name": "Mountain Lodge",
+    "location": "Aspen, CO",
+    "description": "Cozy mountain retreat with ski-in/ski-out access and rustic charm",
+    "price": 290
+  },
+  {
+    "id": "hotel-004",
+    "name": "Desert Oasis Resort",
+    "location": "Phoenix, AZ",
+    "description": "Modern desert resort with multiple pools and golf courses",
+    "price": 320
+  },
+  {
+    "id": "hotel-005",
+    "name": "Bay View Inn",
+    "location": "San Francisco, CA",
+    "description": "Boutique hotel offering panoramic views of the San Francisco Bay",
+    "price": 275
+  }
+]

@@ -1,0 +1,15 @@
+
+.hotel-card {
+    border-radius: 16px;
+    border: 1px solid #999;
+    padding: 1.5em;
+}
+
+.book-now {
+    background-color: #646cff55;
+
+    &:hover {
+        background-color: #646cff;
+        color: white;
+    }
+}
