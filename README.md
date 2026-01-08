@@ -24,6 +24,9 @@ I also have been relying on AI autocomplete in my IDE. It's useful at filling in
 
 ### TODO
 
+- [ ] Add date selection, guests in the global context, like actual hotel apps do
+- [ ] Add hotel inventory with dates available so only available hotels are shown
+- [ ] update pricing model
 - [ ] Add better UI/UX with eye for responsiveness and accessibility
 - [ ] Add tests
 - [ ] Add CI/CD
