@@ -86,8 +86,13 @@ function HotelDetails() {
         ) : (
           <div>
             <DaysInput onUpdate={(days) => setTotalDays(days)} />
-            {checkOutDate && (
-              <DateDisplay date={checkOutDate} label="Check-Out Date" />
+            {checkInDate && checkOutDate && (
+              <DateDisplay
+                start={checkOutDate}
+                end={checkOutDate}
+                label="Check-Out Date"
+                showRange={false}
+              />
             )}
             {/*<p>Checkout Date: {checkOutDate?.toUTCString()}</p>*/}
             {/*<p>OR</p>
