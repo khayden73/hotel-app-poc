@@ -3,8 +3,9 @@ import { useHotels } from "../context/HotelContext.tsx";
 import styles from "./HotelDetails.module.css";
 import { DateSelector } from "./DateSelector.tsx";
 import { useEffect, useState } from "react";
-import { addDays, daysBetween } from "../utils/dates.ts";
+import { addDays, isDateInThePast } from "../utils/dates.ts";
 import { DaysInput } from "./DaysInput.tsx";
+import { DateDisplay } from "./DateDisplay.tsx";
 
 function HotelDetails() {
   const [dateError, setDateError] = useState<string | null>(null);
@@ -15,13 +16,6 @@ function HotelDetails() {
   const { hotelId } = useParams();
   const { getHotelById } = useHotels();
 
-  console.info("on render", {
-    selectCheckOut,
-    checkInDate,
-    checkOutDate,
-    totalDays,
-  });
-
   useEffect(() => {
     if (selectCheckOut) {
       if (checkInDate && checkOutDate) {
@@ -30,20 +24,14 @@ function HotelDetails() {
       return;
     }
     if (checkInDate && totalDays > 0) {
-      setCheckOutDate(addDays(checkInDate, totalDays));
+      if (isDateInThePast(checkInDate)) {
+        setDateError("Check-in date must not be in the past");
+      } else {
+        setDateError(null);
+        setCheckOutDate(addDays(checkInDate, totalDays));
+      }
     }
   }, [checkInDate, selectCheckOut, totalDays]);
-
-  /*useEffect(() => {
-    if (!selectCheckOut && !checkInDate) return;
-    const checkOut = addDays(checkInDate!, totalDays);
-    console.info("checkin plus days", {
-      checkInDate,
-      totalDays,
-      checkOut,
-    });
-    // setCheckOutDate(checkOut);
-  }, [checkInDate, totalDays, selectCheckOut]);*/
 
   if (!hotelId) return <p>No hotel selected</p>;
 
@@ -61,14 +49,6 @@ function HotelDetails() {
     const todayUTC = new Date(timestampUTC);
     todayUTC.setUTCHours(0, 0, 0, 0);
 
-    console.info("dates", {
-      rightNow,
-      timestampUTC,
-      todayUTC,
-      checkIn,
-      checkOut,
-    });
-
     if (checkIn > checkOut) {
       setDateError("Check-in date must be before check-out date");
       return;
@@ -78,7 +58,6 @@ function HotelDetails() {
       return;
     }
     if (checkIn.getTime() < todayUTC.getTime()) {
-      console.info("date error", {});
       setDateError("Check-in date must not be in the past");
       return;
     }
@@ -107,7 +86,10 @@ function HotelDetails() {
         ) : (
           <div>
             <DaysInput onUpdate={(days) => setTotalDays(days)} />
-            <p>Checkout Date: {checkOutDate?.toUTCString()}</p>
+            {checkOutDate && (
+              <DateDisplay date={checkOutDate} label="Check-Out Date" />
+            )}
+            {/*<p>Checkout Date: {checkOutDate?.toUTCString()}</p>*/}
             {/*<p>OR</p>
             <button onClick={() => setSelectCheckOut(true)}>
               Select Check-Out Date

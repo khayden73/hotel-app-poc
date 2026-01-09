@@ -1,7 +1,16 @@
 const oneDay = 1000 * 60 * 60 * 24;
 
-function areDatesInOrder(date1: Date, date2: Date) {
-  return date1 < date2;
+function isDateInThePast(start: Date) {
+  const rightNow = new Date();
+  const timestampUTC = Date.UTC(
+    rightNow.getFullYear(),
+    rightNow.getMonth(),
+    rightNow.getDate(),
+  );
+  const todayUTC = new Date(timestampUTC);
+  todayUTC.setUTCHours(0, 0, 0, 0);
+
+  return start.getTime() < todayUTC.getTime();
 }
 
 function daysBetween(start: Date, end: Date) {
@@ -29,16 +38,8 @@ function addDays(start: Date, days: number) {
     start.getUTCMonth(),
     start.getUTCDate(),
   );
-  const end = new Date(utc + days * oneDay);
-  console.info("[addDays]", {
-    start,
-    utc,
-    days,
-    oneDay,
-    math: utc + days * oneDay,
-    end,
-  });
-  return end;
+
+  return new Date(utc + days * oneDay);
 }
 
-export { daysBetween, addDays };
+export { daysBetween, addDays, isDateInThePast };

@@ -16,8 +16,6 @@ function DateSelector({ title, onSelected }: DateSelectorProps) {
     const value = e.target.value;
     setDateString(value);
 
-    console.log({ value });
-
     const parsedDate = new Date(`${value}T00:00:00.000Z`);
     // validate date
     if (isNaN(parsedDate.getTime())) {
